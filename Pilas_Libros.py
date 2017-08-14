@@ -8,9 +8,9 @@ class Libro():
 	def imprimirLibro(self):
 		print self.nombre, "-" , self.autor
 
+pila = Pila()
 pilaAux = Pila() 
 pilaAux2 = Pila()
-pila = Pila()
 
 def buscarLibrosAutor(pila, autor):
 	for i in range(0, pila.longitudPila() ):
@@ -30,10 +30,10 @@ def buscarLibrosNombre(pila, nombre):
 
 pila.agregarElemento(Libro("It", "Stephen King"))
 pila.agregarElemento(Libro("Cujo", "Stephen King"))
-pila.agregarElemento(Libro("Aja", "Blabla"))
+pila.agregarElemento(Libro("Matar a un Ruiseñor", "Harper Lee"))
 pila.agregarElemento(Libro("Carrie", "Stephen King"))
-pila.agregarElemento(Libro("Jeje", "Jojojo"))
-
+pila.agregarElemento(Libro("Suave es la noche", "F. Scott Fitzgerald"))
+pila.agregarElemento(Libro("1984", "George Orwell"))
 
 pila2 = buscarLibrosAutor(pila, "Stephen King")
 libro = pila2.getElementoPos(2)
